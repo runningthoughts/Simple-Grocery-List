@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery List</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="images/icon-grocery.png" type="image/png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Grocery List">
+    <link rel="apple-touch-icon" href="images/icon-grocery.png">
+</head>
+<body>
+	
+    <div id="container">
+        <h1>Grocery List</h1>
+        <div id="new-item">
+            <input type="text" id="new-item-text" placeholder="Add new item...">
+        </div>
+        <ul id="grocery-list"></ul>
+        <div id="added-to-cart" style="display: none;">
+            <h3>Added to cart</h3>
+            <ul id="cart-list"></ul>
+        </div>
+        <img src="images/trash.png" alt="Trash can" class="trash-can" id="trash-can" style="display: none;">
+    </div>
+
+	<script src="scripts.js"></script>
+
+	<script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('service-worker.js').then(function(registration) {
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }, function(err) {
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+            });
+        }
+    </script>
+
+	</body>
+</html>

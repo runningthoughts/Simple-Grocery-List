@@ -1,0 +1,20 @@
+{
+    "name": "Grocery List",
+    "short_name": "Grocery",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#d7e3fc",
+    "theme_color": "#d7e3fc",
+    "icons": [
+        {
+            "src": "images/icon-grocery.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "images/icon-grocery.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
