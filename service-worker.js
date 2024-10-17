@@ -1,4 +1,4 @@
-const CACHE_NAME = 'grocery-list-cache-offline';
+const CACHE_NAME = 'grocery-list-cache-offline-v1.1';
 const urlsToCache = [
     '/',
     '/index.html',
